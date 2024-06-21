@@ -2,16 +2,19 @@
 <html>
 <head>
     <title>Image Upload</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1>Upload an Image</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" required>
-        <button type="submit">Upload</button>
-    </form>
-    {% if image_path %}
-    <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" alt="Uploaded Image">
-    {% endif %}
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data" class="form-group">
+            <label for="image">Choose an Image:</label>
+            <input type="file" name="image" id="image" required>
+            <button type="submit" class="form-group button">Upload</button>
+        </form>
+        {% if image_path %}
+        <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+        {% endif %}
+    </div>
 </body>
 </html>
