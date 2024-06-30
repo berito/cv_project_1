@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image Upload</title>
+    <title>Plate Number Detector</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Upload an Image</h1>
+    <header class="page-header">
+        <h1>Plate Number Detector</h1>
+     </header>
+  
     <div class="form-container">
         <form method="POST" enctype="multipart/form-data" class="form-group">
             <label for="image">Choose an Image:</label>
             <input type="file" name="image" id="image" required>
             <button type="submit" class="form-group button">Upload</button>
         </form>
-        {% if image_path %}
-        <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
-        {% endif %}
+        <!-- {% if orginal_image and new_image %}
+        <div class="image-display-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + orginal_image.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+            <div class="image-box">
+                <h3>Processed Image</h3>
+                <img src="data:image/jpeg;base64,{{ new_image }}" alt="Processed Image"> -->
+            <!-- </div>
+        </div>
+        {% endif %}  --> 
+       
+     
     </div>
+    <footer class="page-footer">
+        <div class="container">
+          <p>&copy; 2024 Plate Number Detector. CV project 1 All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

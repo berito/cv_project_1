@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Plate Number Detector</h1>
+     </header>
+        {% if orginal_image_path and new_image_path %}
+        <div class="form-container">
+        
+        <div class="row">
+            <div class="image-box">
+                <h3>Camera Captured Image</h3>
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + orginal_image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+            <div class="image-box">
+                <h3>Edge Detected</h3>
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + edge_image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="image-box">
+                <h3>Cropped Image</h3>
+                <!-- <img src="data:image/jpeg;base64,{{ new_image }}" alt="Processed Image"> -->
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + cropped_image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+            <div class="image-box">
+                <h3>Merged Image</h3>
+                <!-- <img src="data:image/jpeg;base64,{{ new_image }}" alt="Processed Image"> -->
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + merged_image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-box">
+                <h3>Plate Number Identified</h3>
+                <!-- <img src="data:image/jpeg;base64,{{ new_image }}" alt="Processed Image"> -->
+                <img class="styled-image" src="{{ url_for('static', filename='uploads/' + new_image_path.split('/')[-1]) }}" alt="Uploaded Image" class="form-group">
+            </div>
+        </div>
+        
+            
+        </div>
+        {% endif %}    
+     
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+          <p>&copy; 2024 Plate Number Detector. CV project 1 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

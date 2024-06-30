@@ -1,11 +1,44 @@
+/* Header */
+.page-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  /* border-radius: 10px; */
+  margin-top: 0; /* Remove top margin */
+  margin-right: 0; /* Remove right margin */
+  margin-left: 0; /* Remove left margin */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Footer */
+.page-footer {
+  background-color:#4CAF50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.page-footer p {
+  margin: 0;
+}
 /* Form Container */
 .form-container {
-  max-width: 500px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
   background-color: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid red;  /* Debugging border */
 }
 
 /* Form Group */
@@ -56,4 +89,39 @@
   color: red;
   font-size: 14px;
   margin-top: 5px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.row .image-box {
+  flex: 0 0 50%;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.row .image-box img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row .image-box h3 {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row .image-box {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
 }
