@@ -3,8 +3,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 import imutils
 import os
-import base64
-# import easyocr
 import pytesseract
 
 def change_to_gray(img):
