@@ -1,6 +1,6 @@
 # License Plate Detection Project
 
-This project is a simple license plate detection system implemented in Python using OpenCV, EasyOCR, and Matplotlib libraries.
+This project is a simple web based license plate detection system implemented in Python using OpenCV, pytesseract, and Matplotlib libraries.
 
 ## Introduction
 
@@ -10,14 +10,14 @@ The goal of this project is to develop a system that can detect license plates i
 
 You need to have the following libraries installed in your Python environment to run this project:
 - OpenCV
-- EasyOCR
+- pytesseract
 - Matplotlib
 
 You can install these libraries using pip:
 
 ```bash
 pip install opencv-python
-pip install easyocr
+pip install pytesseract
 pip install matplotlib
 ```
 
@@ -46,7 +46,7 @@ pip install matplotlib
 
 2. **License Plate Detection**: OpenCV is used to detect the location of license plates within the image using image processing techniques such as edge detection and contour analysis.
 
-3. **License Plate Recognition**: EasyOCR is employed to recognize and extract the text from the detected license plates.
+3. **License Plate Recognition**: pytesseract is employed to recognize and extract the text from the detected license plates.
 
 4. **Result Visualization**: Matplotlib is used to visualize the original image with the detected license plates and the extracted license plate numbers.
 
@@ -58,7 +58,7 @@ pip install matplotlib
 ## Acknowledgements
 
 - [OpenCV](https://opencv.org/): Open Source Computer Vision Library
-- [EasyOCR](https://github.com/JaidedAI/EasyOCR): Ready-to-Use OCR with 40+ languages supported
+- [pytesseract](https://pytesseract.readthedocs.io/en/latest/): Ready-to-Use OCR with 40+ languages supported
 - [Matplotlib](https://matplotlib.org/): Python plotting library
 
 ## License
