@@ -25,17 +25,17 @@ pip install matplotlib
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/license-plate-detection.git
+   git clone https://github.com/your-username/cv_project_1.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd license-plate-detection
+   cd cv_project_1
    ```
 
 3. Run the main Python script:
    ```bash
-   python license_plate_detection.py
+  flask --app app --debug run
    ```
 
 4. The script will process the input image, detect license plates, and display the result with the extracted plate numbers.
