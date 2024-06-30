@@ -35,7 +35,7 @@ pip install matplotlib
 
 3. Run the main Python script:
    ```bash
-  flask --app app --debug run
+      flask --app app --debug run
    ```
 
 4. The script will process the input image, detect license plates, and display the result with the extracted plate numbers.
